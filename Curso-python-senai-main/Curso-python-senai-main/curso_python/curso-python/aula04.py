@@ -142,3 +142,81 @@ salario = locale.currency(salario)
 print("O seu salario é de {}".format(salario))
 
 #14
+frang= int(input("Digite a quantidade de frangos na granja: "))
+
+anel_ind= (frang *1)*4.00
+anel_alim= (frang*2)*3.50
+
+valor= anel_alim+anel_ind
+valor= locale.currency(valor)
+
+print("O valor gasto para marcar todos frangos é de {} ".format(valor))
+
+#15
+
+bls= int(input("Digite a quantidade de blusas a serem produzidas: "))
+la= float(input("Digite a quantidade novelos pra confecionar uma blusa: "))
+
+print("A quantidade gasta de novelos para confecionar {} blusas é de {}".format(bls,bls*la))
+
+#16
+
+grf1= int(input("Digite a quantidade de garrafas de 1 litro: "))
+grf2= int(input("Digite a quantidade de garrafas de 2 litros: "))
+grf3= int(input("Digite a quantidade de garrafas de 3 litros: "))
+
+total_litros = grf1+(grf2*2)+(grf3*3)
+print("A quantidade de litros comprados foi de: {} ".format(total_litros))
+
+#17
+
+def calculo_media(notas,pesos):
+    soma_pond= sum([nota * peso for nota, peso in zip(notas,pesos)])
+    soma_pesos= sum(pesos)
+    
+    media_pond= soma_pond/soma_pesos
+    return media_pond
+
+notas=[]
+pesos=[]
+
+num_notas= int(input("Informa o numero de notas: "))
+
+for i in range(num_notas):
+    nota=float(input(f"Informe a nota {i+1}: "))
+    notas.append(nota)
+
+    peso=float(input(f"Informe o peso {i+1}: "))
+    pesos.append(peso)
+
+    media=calculo_media(notas,pesos)
+
+    if isinstance(media,str):
+        print("A media é {} ".format(media))
+    else:
+        print(f"A media ponderada é :{media:.2f}")
+
+#18
+
+def calculo_comis(num_vendas,val_vendas):
+    
+    soma_vendas= sum([venda * 0.04 for venda in zip(num_vendas)])
+
+    return soma_vendas
+
+num_vendas=int(input("Digite o numero de vendas: "))
+val_vendas=[]
+
+for i in range(num_vendas):
+    venda=float(input(f"Informe o valor da {i+1} venda: "))
+    val_vendas.append(venda)
+
+    val_comis=calculo_comis(num_vendas,val_vendas)
+
+    sal=float(input("digite o salario base: "))
+        
+    sal_final=calculo_comis(num_vendas,val_vendas) + sal
+
+    if isinstance(sal_final,str):
+        print("O slario final é {} ".format(sal_final))
+    
