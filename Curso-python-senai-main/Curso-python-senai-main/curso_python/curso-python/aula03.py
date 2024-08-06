@@ -42,10 +42,8 @@ print("O quadrado desse numero é : {}".format(num1**2))
 
 #5
 num1= int(input("Digite um numero: "))
-ant= num1-1
-sus= num+1
 
-print("O sucessor e antecessor do numero {} são respectivamente {}, {}".format(num1,ant,sus))
+print("O sucessor e antecessor do numero {} são respectivamente {}, {}".format(num1,num1-1,num+1))
 
 #6
 

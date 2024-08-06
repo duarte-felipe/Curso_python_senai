@@ -1,9 +1,7 @@
-import datetime
+numero = int(input("Digite um número para calcular a tabuada (somente numero pares): "))
 
-ano = int(input("Digite seu ano de nascimento: "))
-ano_atual=datetime.datetime.now().year
-idade=ano_atual-ano
-if (idade>=16):
-    print("Você pode votar esse ano")
-else:
-    print("Você ainda não pode votar")
+print(f"Tabuada do {numero}:")
+for i in range(1, 11):  
+    resultado = numero * i
+    if resultado % 2 == 0 :
+        print(f"{numero} x {i} = {resultado}")

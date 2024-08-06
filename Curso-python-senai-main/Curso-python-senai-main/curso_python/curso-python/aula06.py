@@ -64,7 +64,7 @@ num2 = int(input("Digite um segundo numero: "))
 if (num1>num2):
     print("O numero {} é maior que {}".format(num1,num2))
 else:
-    print("o numero {} é menor que {}".format(num1,num2))
+    print("o numero {} é maior que {}".format(num2,num1))
 #7. Verifique se um número é menor que outro.
 num1 = int(input("Digite um numero: "))
 num2 = int(input("Digite um segundo numero: "))
@@ -72,7 +72,7 @@ num2 = int(input("Digite um segundo numero: "))
 if (num1<num2):
     print("O numero {} é menor que {}".format(num1,num2))
 else:
-    print("o numero {} é maior que {}".format(num1,num2))
+    print("o numero {} é menor que {}".format(num2,num1))
 #8. Verifique se um número é igual a outro.
 num1 = int(input("Digite um numero: "))
 num2 = int(input("Digite um segundo numero: "))
@@ -103,10 +103,12 @@ else:
 idade = int(input("Digite sua idade: "))
 
 
-if (idade<18):
+if (idade>=13 and idade<=17):
     print("Você é adolescente")
-else:
+elif (idade>=18):
     print("Você já é adulto")
+else:
+    print("Você é criança")
 
 #16. Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela poderá ou não votar este ano
 ano = int(input("Digite seu ano de nascimento: "))
