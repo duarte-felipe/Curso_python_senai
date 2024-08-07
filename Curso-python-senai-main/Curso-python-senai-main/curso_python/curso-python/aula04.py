@@ -1,5 +1,7 @@
 #Exercicios
+import locale
 
+locale.setlocale(locale.LC_MONETARY, 'pt_BR.UTF-8')
 #1
 idade1= int(input("Digite a sua idade: "))
 idade2= int(input("Digite a iade de seu amigo: "))
@@ -15,11 +17,11 @@ print("Seu nome em maiusculas é {} e em minusculas é {}".format(nome.upper(),n
 #3
 
 sal= float(input("Digite o seu salario em reais: "))
-acre = float("Digite o percentual de acrescimo: ")
+acre = float(input("Digite o percentual de acrescimo: "))
 
 sal_acre= sal +(sal*(acre/100))
 
-print("O seu salario base é {} e se uacrescimo foi de {}% totalizando {}".format(sal,acre,sal_acre))
+print("O seu salario base é {} e se acrescimo foi de {}% totalizando {}".format(sal,acre,sal_acre))
 
 #4
 print("Bem vindo a imobiliaria Imobilis")
@@ -44,7 +46,7 @@ val_broa= broa*1.50
 
 val_total=val_pao+val_broa
 poup= val_total*0.10
-print("O valor arrecadado de paes vendidos é {}, a de broas são {}, totalizando {}, você deve guardar na poupança {} ".format(val_pao,val_broa,val_total,poup))
+print("O valor arrecadado de paes vendidos é {}, a de broas são {}, totalizando {}, você deve guardar na poupança {} ".format(locale.currency(val_pao),locale.currency(val_broa),locale.currency(val_total),locale.currency(poup)))
 
 #7
 nome= str(input("Digite seu nome: "))

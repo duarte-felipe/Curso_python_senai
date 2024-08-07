@@ -1,7 +1,6 @@
-numero = int(input("Digite um número para calcular a tabuada (somente numero pares): "))
-
-print(f"Tabuada do {numero}:")
-for i in range(1, 11):  
-    resultado = numero * i
-    if resultado % 2 == 0 :
-        print(f"{numero} x {i} = {resultado}")
+i=0
+while i < 21:
+    i+=1
+    if i % 2 !=0:
+        print("Numeros impares até o 20 = {}".format(i))
+        

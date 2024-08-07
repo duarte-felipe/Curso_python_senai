@@ -8,21 +8,15 @@ for i in range(5):
     i + 1 == 5
     print("mensagem numero {}".format(i+1))
 #3. Imprima os números de 80 a 1 (em ordem decrescente).
-num1 = 80
-for i in range(80):
-    num1 -= 1 
 
-    print(num1)
+for i in range(80,1,-1):
+    print(i)
 #4. Imprima os números de 1 a 100, pulando de 5 em 5.
-num1= 0
-for i in range(1,101):
-    num1+=5
-    print(num1)
+for i in range(1,101,5):
+    print(i)
 #5. Imprima os números de 100 a 1, pulando de 10 em 10.
-num1= 100
-for i in range(10):
-    num1-=10
-    print(num1)
+for i in range(100,0,-10):
+    print(i)
 #6. Escreva um algoritmo que exiba 20 vezes a mensagem “Eu gosto de estudar Algoritmos!”.
 for i in range(20):
     i + 1 == 20
@@ -75,7 +69,7 @@ for i in range(1, 11):
     resultado = numero * i
     print(f"{numero} x {i} = {resultado}")
 
-#13. Modifique o algoritmo do exercício 1, de maneira que sejam impressos somente as multiplicações da tabuada cujo resultado seja um número par.
+#13. Modifique o algoritmo do exercício 11, de maneira que sejam impressos somente as multiplicações da tabuada cujo resultado seja um número par.
 numero = int(input("Digite um número para calcular a tabuada: "))
 
 print(f"Tabuada do {numero}:")
